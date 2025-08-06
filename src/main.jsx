@@ -11,9 +11,10 @@ import Sum from './Sum.jsx'
 import HookDemo from './HookDemo.jsx'
 import Sum2 from './sum2.jsx'
 import RegisterHooks from './RegisterHooks.jsx'
+import RegisterClass from './RegisterClass.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RegisterHooks/>
+    <RegisterClass/>
   </StrictMode>,
 )
