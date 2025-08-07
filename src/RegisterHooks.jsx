@@ -1,4 +1,7 @@
 import React from "react";
+import Login from "./Login";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./Home";
 function RegisterHooks() {
     const [name, setname] = React.useState("");
     const [email, setemail] = React.useState("");
@@ -59,7 +62,7 @@ function RegisterHooks() {
     }
     return(
         <>
-        <h1>Welcome to Registeration Page Using Hooks</h1>
+        <h1>Registeration Page Using Hooks</h1>
         Name: <input type="text" placeholder="Enter Name" value={name} onChange={(e) => setname(e.target.value)}/><br/>
         {errmsg.name && <span style={{color: "red"}}>{errmsg.name}</span>}<br/>
         Email: <input type="text" placeholder="Enter Email" value={email} onChange={(e) => setemail(e.target.value)}/><br/>
@@ -98,9 +101,19 @@ function RegisterHooks() {
 
         <button onClick={() => {
                 if (doValidation()) {
+                    localStorage.setItem("name", name);
+                    localStorage.setItem("email", email);
+                    localStorage.setItem("number", number);
+                    localStorage.setItem("semester", semester);
+                    localStorage.setItem("choice", choice);
+                    localStorage.setItem("message", message);
+                    localStorage.setItem("password", password);
+                    localStorage.setItem("confirmPassword", confirmPassword);
+                    localStorage.setItem("agreement", agreement);
                     alert("Registration successful!");
                 }
             }}>Register</button>
+             
         </>
     )
 }

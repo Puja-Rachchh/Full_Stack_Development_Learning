@@ -15,6 +15,6 @@ import RegisterClass from './RegisterClass.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RegisterClass/>
+    <App/>
   </StrictMode>,
 )
